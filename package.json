@@ -1,22 +1,19 @@
 {
   "name": "jest-node-16",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "devDependencies": {
-    "jest": "^27.3.1"
+    "jest": "^29.0.3"
   },
   "scripts": {
-    "test": "jest --silent -i",
-    "test:gc": "node --expose-gc ./node_modules/.bin/jest --silent -i"
+    "test": "jest --silent --runInBand",
+    "test:heap": "npm run test -- --logHeapUsage",
+    "test:gc": "node --expose-gc ./node_modules/.bin/jest --silent --runInBand --logHeapUsage"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luiz290788/jest-node-16.git"
+    "url": "git+https://github.com/johnhunter/jest-node-16.git"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/luiz290788/jest-node-16/issues"
-  },
-  "homepage": "https://github.com/luiz290788/jest-node-16#readme",
   "description": ""
 }
